@@ -47,4 +47,11 @@ myMap.clear();
 console.log(myMap); // Map(0) {}
 
 
-
+//Keys,Values and Entries
+// Maps provide methods to get all keys, values, or entries (key-value pairs).
+// Getting all keys using keys()
+console.log(myMap.keys()); // MapIterator {}
+// Getting all values using values()
+console.log(myMap.values()); // MapIterator {}
+// Getting all entries (key-value pairs) using entries()
+console.log(myMap.entries()); // MapIterator {}

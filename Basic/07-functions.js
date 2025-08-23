@@ -47,6 +47,15 @@ console.log(greet()); // "Hello, Guest!"
 function sum(...numbers) {
     return numbers.reduce((acc, num) => acc + num, 0);
 }   
+
+// Default parameters allow you to set default values for function parameters if no value or undefined is passed.
+function multiply(a = 0, b = 0) {
+    console.log(a * b);
+}
+multiply(5, 2); // 10
+multiply(5); // 0
+multiply(); // 0
+
 // Calling the function with multiple arguments
 console.log(sum(1, 2, 3, 4)); // 10
 // Function with a callback
@@ -92,3 +101,23 @@ let result = superiorFunction(() => {
     return "Callback executed!";
 });
 console.log(result); // "Callback executed!"
+
+// ForEach
+// The forEach method is used to execute a provided function once for each array element.
+let myArrayForEach = [1, 2, 3, 4, 5];
+mySet = new Set([1, 2, 3, 4, 5]);
+myMap = new Map([["Name", "Joel"],
+                ["Email", "example@gmail.com"], 
+                ["age", "22"]
+                ]);
+myArrayForEach.forEach((element) => {
+    console.log(`Element: ${element}`);
+});
+// This will log each element of the Set using forEach.
+mySet.forEach((value) => {
+    console.log(`Set value: ${value}`);
+});
+// This will log each value of the Map using forEach.
+myMap.forEach((value, key) => {
+    console.log(`Map key: ${key}, value: ${value}`);
+});
