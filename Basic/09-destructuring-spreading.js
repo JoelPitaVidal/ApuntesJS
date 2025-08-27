@@ -52,3 +52,21 @@ let { address: { street, city: addressCity, zip } } = student;
 console.log(street); // "123 Main St"
 console.log(addressCity); // "Wonderland"
 console.log(zip); // "12345"
+
+// We can set a default value if the property does not exist in the object
+let { country = "USA" } = student;
+console.log(country); // "USA"
+
+// Animated Object Destructuring
+let { name: studentName, age: studentAge, walk: studentWalk } = student;
+console.log(studentName); // "Alice"
+console.log(studentAge); // 20
+studentWalk(); // "Alice can walking."
+let { courses: [firstCourse, secondCourse] } = student;
+console.log(firstCourse); // "Math"
+console.log(secondCourse); // "Science"
+
+// Using rest operator to collect remaining properties
+let { name: sName, ...otherDetails } = student;
+console.log(sName); // "Alice"
+console.log(otherDetails); // { age: 20, walk: [Function: walk], address: { street: '123 Main St', city: 'Wonderland', zip: '12345' }, courses: [ 'Math', 'Science', 'Art' ] }
