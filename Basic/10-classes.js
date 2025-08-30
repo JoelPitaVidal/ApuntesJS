@@ -101,3 +101,12 @@ let dog = new Dog("Buddy", "Golden Retriever");
 dog.noise(); // Buddy makes a noise.
 dog.run(); // Buddy is running.
 console.log(dog.breed); // Golden Retriever
+
+// Static methods
+class MathUtils {
+    // Static method (can be called without creating an instance of the class)
+    static square(x) {
+        return x * x;
+    }
+}
+console.log(MathUtils.square(5)); // 25
