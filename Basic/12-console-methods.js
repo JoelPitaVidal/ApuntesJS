@@ -11,6 +11,7 @@ for (let i = 0; i < 1000000; i++) {
     // Simulating a time-consuming task
     let temp = Math.sqrt(i);
 }
+// The name "Timer" should match in both console.time and console.timeEnd
 console.timeEnd("Timer"); // End the timer and log the elapsed time
 console.assert(1 === 2, "This assertion failed!"); // Assertion (will log message if condition is false)
 console.clear(); // Clear the console
@@ -33,3 +34,28 @@ console.dir({ name: "Charlie", age: 28 }); // Display an interactive list of the
 
 // Note: Some console methods may not be supported in all environments (e.g., older browsers).
 // The appearance of console output may vary between different browsers and environments.
+
+// Trace method shows the call stack leading to the point where it's called.
+function firstFunction() {
+    secondFunction();
+}  
+function secondFunction() {
+    thirdFunction();
+}
+function thirdFunction() {
+    console.trace("Trace in thirdFunction");
+}
+firstFunction(); // Call the first function to see the trace
+// The console.dir method displays an interactive list of the properties of a specified JavaScript object.
+let obj = {
+    name: "David",
+    age: 35,
+    address: {
+        street: "456 Elm St",
+        city: "Metropolis"
+    },
+    hobbies: ["reading", "traveling", "swimming"]
+};
+console.dir(obj); // Display the object properties in an interactive format in the console
+
+// Using console methods in a web application can help with debugging and monitoring the application's behavior. 
